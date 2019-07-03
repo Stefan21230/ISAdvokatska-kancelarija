@@ -1,0 +1,77 @@
+﻿<Window x:Class="IS_Advokatske_kancelarije.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IS_Advokatske_kancelarije"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Advokat Asisstant" MinHeight="450" MinWidth="800" Height="450" Width="800" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="195*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="195*"/>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+
+        <materialDesign:ColorZone Mode="PrimaryLight" Padding="16" Grid.ColumnSpan="7" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal">
+               <TextBlock VerticalAlignment="Center" Margin="16 0 0 0" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold">
+                    Početna
+               </TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        
+        
+
+
+        <Button
+    Style="{StaticResource MaterialDesignRaisedAccentButton}"       
+    ToolTip="Provera" Height="Auto" Grid.Row="2" Grid.Column="1" Click="Button_Click_1" FontFamily="Times New Roman" FontWeight="Bold" FontSize="16">
+            PROVERA
+        </Button>
+
+        <Button
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="Ažuriranje" Grid.Column="3" Height="Auto" Grid.Row="2" FontFamily="Times New Roman" FontWeight="Bold" FontSize="16">
+            AŽURIRANJE
+        </Button>
+
+        <Button
+    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    ToolTip="Finansije" Grid.Row="4" Height="Auto" Click="Button_Click" Grid.Column="1" FontFamily="Times New Roman" FontWeight="Bold" FontSize="16" ClickMode="Hover">
+            FINANSIJE
+        </Button>
+
+        <Button
+    Style="{StaticResource MaterialDesignRaisedLightButton}"
+    ToolTip="Upravljanje" Grid.Column="3" Grid.Row="4" Height="Auto" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" ClickMode="Hover">
+            UPRAVLJANJE
+        </Button>
+
+        <materialDesign:PackIcon MouseDoubleClick="Izlaz_Click" ToolTip="Izlaz" Kind="ExitToApp" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="6" Width="Auto" Height="Auto" Cursor="Hand" />
+
+        <materialDesign:PackIcon MouseDoubleClick="Pomoc_Click" ToolTip="Pomoć" Kind="HelpCircleOutline" Grid.Row="5" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Width="Auto" Cursor="Hand" />
+
+
+    </Grid>
+
+</Window>
